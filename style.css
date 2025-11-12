@@ -1,0 +1,97 @@
+body {
+  background: linear-gradient(to top, #87ceeb, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+#mensaje {
+  position: absolute;
+  top: 150px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  display: none;
+}
+
+.muñeco {
+  position: relative;
+  width: 100px;
+  animation: sway 3s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.bolita {
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.abajo {
+  width: 100px;
+  height: 100px;
+}
+
+.enmedio {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: -60px;
+  left: 15px;
+}
+
+.arriba {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -110px;
+  left: 25px;
+}
+
+.ojo {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+}
+
+.ojo.i {
+  left: 12px;
+}
+
+.ojo.d {
+  right: 12px;
+}
+
+.nariz {
+  width: 10px;
+  height: 5px;
+  background: orange;
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  transform: rotate(20deg);
+}
+
+@keyframes jump {
+  0% { transform: translateY(0); }
+  30% { transform: translateY(-50px); }
+  50% { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+
+}
+
+.jumping {
+  animation: jump 0.6s ease;
+}
